@@ -1,0 +1,34 @@
+{
+    "XW374": {
+        "R1": [
+            "fq_YD208/XW374_R1_001.fastq.gz"
+        ],
+        "R2": [
+            "fq_YD208/XW374_R2_001.fastq.gz"
+        ]
+    },
+    "XW375": {
+        "R1": [
+            "fq_YD208/XW375_R1_001.fastq.gz"
+        ],
+        "R2": [
+            "fq_YD208/XW375_R2_001.fastq.gz"
+        ]
+    },
+    "XW376": {
+        "R1": [
+            "fq_YD208/XW376_R1_001.fastq.gz"
+        ],
+        "R2": [
+            "fq_YD208/XW376_R2_001.fastq.gz"
+        ]
+    },
+    "mx66": {
+        "R1": [
+            "fq_YD208/mx66_R1_001.fastq.gz"
+        ],
+        "R2": [
+            "fq_YD208/mx66_R2_001.fastq.gz"
+        ]
+    }
+}

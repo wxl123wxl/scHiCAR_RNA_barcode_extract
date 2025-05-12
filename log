@@ -1,0 +1,616 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cluster nodes: 99
+Job counts:
+	count	jobs
+	3	find_right_barcodes
+	3	find_right_barcodes_ME
+	3	find_right_barcodes_randomN
+	4	r1_zip
+	4	r1_zip_ME
+	4	r1_zip_randomN
+	4	r2_zip
+	4	r2_zip_ME
+	4	r2_zip_randomN
+	3	read1_barcode_correction
+	3	read1_barcode_correction_ME
+	3	read1_barcode_correction_randomN
+	1	targetfiles
+	43
+
+[Wed Apr 16 19:37:56 2025]
+rule find_right_barcodes_ME:
+    input: 02_barcode_info/XW374_ME_raw_barcode_count.txt
+    output: 02_barcode_info/XW374_ME.barcode_final_summary, 02_barcode_info/XW374_ME.barcode_final_map, 02_barcode_info/XW374_ME.barcode_log
+    jobid: 45
+    wildcards: sample=XW374
+
+Submitted job 45 with external jobid 'Submitted batch job 28058813'.
+
+[Wed Apr 16 19:37:56 2025]
+rule find_right_barcodes_randomN:
+    input: 02_barcode_info/XW376_randomN_raw_barcode_count.txt
+    output: 02_barcode_info/XW376_randomN.barcode_final_summary, 02_barcode_info/XW376_randomN.barcode_final_map, 02_barcode_info/XW376_randomN.barcode_log
+    jobid: 40
+    wildcards: sample=XW376
+
+Submitted job 40 with external jobid 'Submitted batch job 28058814'.
+
+[Wed Apr 16 19:37:56 2025]
+rule r1_zip:
+    input: 03_corrected_fq/mx66_oligodT_L001_R1_001.fastq
+    output: 03_corrected_fq/mx66_oligodT_L001_R1_001.fastq.gz
+    jobid: 24
+    wildcards: sample=mx66
+    threads: 11
+
+pigz -p 11 03_corrected_fq/mx66_oligodT_L001_R1_001.fastq
+Submitted job 24 with external jobid 'Submitted batch job 28058815'.
+
+[Wed Apr 16 19:37:56 2025]
+rule find_right_barcodes_ME:
+    input: 02_barcode_info/XW375_ME_raw_barcode_count.txt
+    output: 02_barcode_info/XW375_ME.barcode_final_summary, 02_barcode_info/XW375_ME.barcode_final_map, 02_barcode_info/XW375_ME.barcode_log
+    jobid: 46
+    wildcards: sample=XW375
+
+Submitted job 46 with external jobid 'Submitted batch job 28058816'.
+
+[Wed Apr 16 19:37:56 2025]
+rule find_right_barcodes:
+    input: 02_barcode_info/XW376_oligodT_raw_barcode_count.txt
+    output: 02_barcode_info/XW376_oligodT.barcode_final_summary, 02_barcode_info/XW376_oligodT.barcode_final_map, 02_barcode_info/XW376_oligodT.barcode_log
+    jobid: 57
+    wildcards: sample=XW376
+
+Submitted job 57 with external jobid 'Submitted batch job 28058817'.
+
+[Wed Apr 16 19:37:57 2025]
+rule find_right_barcodes_ME:
+    input: 02_barcode_info/XW376_ME_raw_barcode_count.txt
+    output: 02_barcode_info/XW376_ME.barcode_final_summary, 02_barcode_info/XW376_ME.barcode_final_map, 02_barcode_info/XW376_ME.barcode_log
+    jobid: 47
+    wildcards: sample=XW376
+
+Submitted job 47 with external jobid 'Submitted batch job 28058818'.
+
+[Wed Apr 16 19:37:57 2025]
+rule r2_zip:
+    input: 03_corrected_fq/mx66_oligodT_L001_R2_001.fastq
+    output: 03_corrected_fq/mx66_oligodT_L001_R2_001.fastq.gz
+    jobid: 28
+    wildcards: sample=mx66
+    threads: 11
+
+pigz -p 11 03_corrected_fq/mx66_oligodT_L001_R2_001.fastq
+Submitted job 28 with external jobid 'Submitted batch job 28058819'.
+
+[Wed Apr 16 19:37:57 2025]
+rule r1_zip_ME:
+    input: 03_corrected_fq/mx66_ME_L001_R1_001.fastq
+    output: 03_corrected_fq/mx66_ME_L001_R1_001.fastq.gz
+    jobid: 12
+    wildcards: sample=mx66
+    threads: 11
+
+pigz -p 11 03_corrected_fq/mx66_ME_L001_R1_001.fastq
+Submitted job 12 with external jobid 'Submitted batch job 28058820'.
+
+[Wed Apr 16 19:37:57 2025]
+rule find_right_barcodes_randomN:
+    input: 02_barcode_info/XW375_randomN_raw_barcode_count.txt
+    output: 02_barcode_info/XW375_randomN.barcode_final_summary, 02_barcode_info/XW375_randomN.barcode_final_map, 02_barcode_info/XW375_randomN.barcode_log
+    jobid: 37
+    wildcards: sample=XW375
+
+Submitted job 37 with external jobid 'Submitted batch job 28058821'.
+
+[Wed Apr 16 19:37:57 2025]
+rule find_right_barcodes:
+    input: 02_barcode_info/XW374_oligodT_raw_barcode_count.txt
+    output: 02_barcode_info/XW374_oligodT.barcode_final_summary, 02_barcode_info/XW374_oligodT.barcode_final_map, 02_barcode_info/XW374_oligodT.barcode_log
+    jobid: 51
+    wildcards: sample=XW374
+
+Submitted job 51 with external jobid 'Submitted batch job 28058822'.
+
+[Wed Apr 16 19:37:57 2025]
+rule r2_zip_ME:
+    input: 03_corrected_fq/mx66_ME_L001_R2_001.fastq
+    output: 03_corrected_fq/mx66_ME_L001_R2_001.fastq.gz
+    jobid: 16
+    wildcards: sample=mx66
+    threads: 11
+
+pigz -p 11 03_corrected_fq/mx66_ME_L001_R2_001.fastq
+Submitted job 16 with external jobid 'Submitted batch job 28058823'.
+
+[Wed Apr 16 19:37:57 2025]
+rule find_right_barcodes:
+    input: 02_barcode_info/XW375_oligodT_raw_barcode_count.txt
+    output: 02_barcode_info/XW375_oligodT.barcode_final_summary, 02_barcode_info/XW375_oligodT.barcode_final_map, 02_barcode_info/XW375_oligodT.barcode_log
+    jobid: 54
+    wildcards: sample=XW375
+
+Submitted job 54 with external jobid 'Submitted batch job 28058824'.
+
+[Wed Apr 16 19:37:57 2025]
+rule find_right_barcodes_randomN:
+    input: 02_barcode_info/XW374_randomN_raw_barcode_count.txt
+    output: 02_barcode_info/XW374_randomN.barcode_final_summary, 02_barcode_info/XW374_randomN.barcode_final_map, 02_barcode_info/XW374_randomN.barcode_log
+    jobid: 34
+    wildcards: sample=XW374
+
+Submitted job 34 with external jobid 'Submitted batch job 28058825'.
+Waiting at most 50 seconds for missing files.
+[Wed Apr 16 19:38:56 2025]
+Finished job 12.
+1 of 43 steps (2%) done
+[Wed Apr 16 19:38:56 2025]
+Finished job 37.
+2 of 43 steps (5%) done
+
+[Wed Apr 16 19:38:56 2025]
+rule read1_barcode_correction_randomN:
+    input: 00_raw_fq_update/XW375_adapter1RNA_randomN_L001_R1_001.fastq, 00_raw_fq_update/XW375_adapter1RNA_randomN_L001_R2_001.fastq, 02_barcode_info/XW375_randomN.barcode_final_map
+    output: 03_corrected_fq/XW375_randomN_L001_R1_001.fastq, 03_corrected_fq/XW375_randomN_L001_R2_001.fastq
+    log: 00_log/XW375_L001_R1_corrected.log
+    jobid: 19
+    wildcards: sample=XW375
+
+[Wed Apr 16 19:38:56 2025]
+Finished job 16.
+3 of 43 steps (7%) done
+[Wed Apr 16 19:38:56 2025]
+Finished job 34.
+4 of 43 steps (9%) done
+Submitted job 19 with external jobid 'Submitted batch job 28058874'.
+
+[Wed Apr 16 19:38:56 2025]
+rule read1_barcode_correction_randomN:
+    input: 00_raw_fq_update/XW374_adapter1RNA_randomN_L001_R1_001.fastq, 00_raw_fq_update/XW374_adapter1RNA_randomN_L001_R2_001.fastq, 02_barcode_info/XW374_randomN.barcode_final_map
+    output: 03_corrected_fq/XW374_randomN_L001_R1_001.fastq, 03_corrected_fq/XW374_randomN_L001_R2_001.fastq
+    log: 00_log/XW374_L001_R1_corrected.log
+    jobid: 17
+    wildcards: sample=XW374
+
+Submitted job 17 with external jobid 'Submitted batch job 28058875'.
+[Wed Apr 16 19:39:06 2025]
+Finished job 45.
+5 of 43 steps (12%) done
+
+[Wed Apr 16 19:39:06 2025]
+rule read1_barcode_correction_ME:
+    input: 00_raw_fq_update/XW374_adapter1ME_L001_R1_001.fastq, 00_raw_fq_update/XW374_adapter1ME_L001_R2_001.fastq, 02_barcode_info/XW374_ME.barcode_final_map
+    output: 03_corrected_fq/XW374_ME_L001_R1_001.fastq, 03_corrected_fq/XW374_ME_L001_R2_001.fastq
+    log: 00_log/XW374_L001_R1_corrected.log
+    jobid: 29
+    wildcards: sample=XW374
+
+[Wed Apr 16 19:39:06 2025]
+Finished job 40.
+6 of 43 steps (14%) done
+[Wed Apr 16 19:39:06 2025]
+Finished job 46.
+7 of 43 steps (16%) done
+[Wed Apr 16 19:39:06 2025]
+Finished job 47.
+8 of 43 steps (19%) done
+Submitted job 29 with external jobid 'Submitted batch job 28058876'.
+[Wed Apr 16 19:39:06 2025]
+Finished job 51.
+9 of 43 steps (21%) done
+
+[Wed Apr 16 19:39:06 2025]
+rule read1_barcode_correction_ME:
+    input: 00_raw_fq_update/XW376_adapter1ME_L001_R1_001.fastq, 00_raw_fq_update/XW376_adapter1ME_L001_R2_001.fastq, 02_barcode_info/XW376_ME.barcode_final_map
+    output: 03_corrected_fq/XW376_ME_L001_R1_001.fastq, 03_corrected_fq/XW376_ME_L001_R2_001.fastq
+    log: 00_log/XW376_L001_R1_corrected.log
+    jobid: 31
+    wildcards: sample=XW376
+
+Submitted job 31 with external jobid 'Submitted batch job 28058877'.
+
+[Wed Apr 16 19:39:06 2025]
+rule read1_barcode_correction:
+    input: 00_raw_fq_update/XW374_adapter1RNA_oligodT_L001_R1_001.fastq, 00_raw_fq_update/XW374_adapter1RNA_oligodT_L001_R2_001.fastq, 02_barcode_info/XW374_oligodT.barcode_final_map
+    output: 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq, 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq
+    log: 00_log/XW374_L001_R1_corrected.log
+    jobid: 35
+    wildcards: sample=XW374
+
+Submitted job 35 with external jobid 'Submitted batch job 28058878'.
+
+[Wed Apr 16 19:39:06 2025]
+rule read1_barcode_correction_randomN:
+    input: 00_raw_fq_update/XW376_adapter1RNA_randomN_L001_R1_001.fastq, 00_raw_fq_update/XW376_adapter1RNA_randomN_L001_R2_001.fastq, 02_barcode_info/XW376_randomN.barcode_final_map
+    output: 03_corrected_fq/XW376_randomN_L001_R1_001.fastq, 03_corrected_fq/XW376_randomN_L001_R2_001.fastq
+    log: 00_log/XW376_L001_R1_corrected.log
+    jobid: 21
+    wildcards: sample=XW376
+
+Submitted job 21 with external jobid 'Submitted batch job 28058879'.
+
+[Wed Apr 16 19:39:07 2025]
+rule read1_barcode_correction_ME:
+    input: 00_raw_fq_update/XW375_adapter1ME_L001_R1_001.fastq, 00_raw_fq_update/XW375_adapter1ME_L001_R2_001.fastq, 02_barcode_info/XW375_ME.barcode_final_map
+    output: 03_corrected_fq/XW375_ME_L001_R1_001.fastq, 03_corrected_fq/XW375_ME_L001_R2_001.fastq
+    log: 00_log/XW375_L001_R1_corrected.log
+    jobid: 30
+    wildcards: sample=XW375
+
+Submitted job 30 with external jobid 'Submitted batch job 28058880'.
+[Wed Apr 16 19:39:17 2025]
+Finished job 54.
+10 of 43 steps (23%) done
+
+[Wed Apr 16 19:39:17 2025]
+rule read1_barcode_correction:
+    input: 00_raw_fq_update/XW375_adapter1RNA_oligodT_L001_R1_001.fastq, 00_raw_fq_update/XW375_adapter1RNA_oligodT_L001_R2_001.fastq, 02_barcode_info/XW375_oligodT.barcode_final_map
+    output: 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq, 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq
+    log: 00_log/XW375_L001_R1_corrected.log
+    jobid: 38
+    wildcards: sample=XW375
+
+Submitted job 38 with external jobid 'Submitted batch job 28058881'.
+[Wed Apr 16 19:39:50 2025]
+Finished job 29.
+11 of 43 steps (26%) done
+
+[Wed Apr 16 19:39:50 2025]
+rule r2_zip_ME:
+    input: 03_corrected_fq/XW374_ME_L001_R2_001.fastq
+    output: 03_corrected_fq/XW374_ME_L001_R2_001.fastq.gz
+    jobid: 13
+    wildcards: sample=XW374
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW374_ME_L001_R2_001.fastq
+[Wed Apr 16 19:39:50 2025]
+Finished job 21.
+12 of 43 steps (28%) done
+[Wed Apr 16 19:39:50 2025]
+Finished job 30.
+13 of 43 steps (30%) done
+[Wed Apr 16 19:39:50 2025]
+Finished job 24.
+14 of 43 steps (33%) done
+Submitted job 13 with external jobid 'Submitted batch job 28058901'.
+
+[Wed Apr 16 19:39:50 2025]
+rule r1_zip_ME:
+    input: 03_corrected_fq/XW374_ME_L001_R1_001.fastq
+    output: 03_corrected_fq/XW374_ME_L001_R1_001.fastq.gz
+    jobid: 9
+    wildcards: sample=XW374
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW374_ME_L001_R1_001.fastq
+[Wed Apr 16 19:39:50 2025]
+Finished job 57.
+15 of 43 steps (35%) done
+[Wed Apr 16 19:39:50 2025]
+Finished job 19.
+16 of 43 steps (37%) done
+Submitted job 9 with external jobid 'Submitted batch job 28058902'.
+
+[Wed Apr 16 19:39:50 2025]
+rule r1_zip_ME:
+    input: 03_corrected_fq/XW375_ME_L001_R1_001.fastq
+    output: 03_corrected_fq/XW375_ME_L001_R1_001.fastq.gz
+    jobid: 10
+    wildcards: sample=XW375
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW375_ME_L001_R1_001.fastq
+Submitted job 10 with external jobid 'Submitted batch job 28058903'.
+
+[Wed Apr 16 19:39:51 2025]
+rule r2_zip_ME:
+    input: 03_corrected_fq/XW375_ME_L001_R2_001.fastq
+    output: 03_corrected_fq/XW375_ME_L001_R2_001.fastq.gz
+    jobid: 14
+    wildcards: sample=XW375
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW375_ME_L001_R2_001.fastq
+Submitted job 14 with external jobid 'Submitted batch job 28058904'.
+
+[Wed Apr 16 19:39:51 2025]
+rule r1_zip_randomN:
+    input: 03_corrected_fq/mx66_randomN_L001_R1_001.fastq, 03_corrected_fq/mx66_oligodT_L001_R1_001.fastq.gz
+    output: 03_corrected_fq/mx66_randomN_L001_R1_001.fastq.gz, 03_corrected_fq/mx66_all_L001_R1_001.fastq.gz
+    jobid: 4
+    wildcards: sample=mx66
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/mx66_randomN_L001_R1_001.fastq
+        cat 03_corrected_fq/mx66_oligodT_L001_R1_001.fastq.gz 03_corrected_fq/mx66_randomN_L001_R1_001.fastq.gz > 03_corrected_fq/mx66_all_L001_R1_001.fastq.gz
+        
+Submitted job 4 with external jobid 'Submitted batch job 28058905'.
+
+[Wed Apr 16 19:39:51 2025]
+rule read1_barcode_correction:
+    input: 00_raw_fq_update/XW376_adapter1RNA_oligodT_L001_R1_001.fastq, 00_raw_fq_update/XW376_adapter1RNA_oligodT_L001_R2_001.fastq, 02_barcode_info/XW376_oligodT.barcode_final_map
+    output: 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq, 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq
+    log: 00_log/XW376_L001_R1_corrected.log
+    jobid: 41
+    wildcards: sample=XW376
+
+Submitted job 41 with external jobid 'Submitted batch job 28058906'.
+[Wed Apr 16 19:39:51 2025]
+Finished job 17.
+17 of 43 steps (40%) done
+[Wed Apr 16 19:40:01 2025]
+Finished job 28.
+18 of 43 steps (42%) done
+
+[Wed Apr 16 19:40:01 2025]
+rule r2_zip_randomN:
+    input: 03_corrected_fq/mx66_randomN_L001_R2_001.fastq, 03_corrected_fq/mx66_oligodT_L001_R2_001.fastq.gz
+    output: 03_corrected_fq/mx66_randomN_L001_R2_001.fastq.gz, 03_corrected_fq/mx66_all_L001_R2_001.fastq.gz
+    jobid: 8
+    wildcards: sample=mx66
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/mx66_randomN_L001_R2_001.fastq
+        cat 03_corrected_fq/mx66_oligodT_L001_R2_001.fastq.gz 03_corrected_fq/mx66_randomN_L001_R2_001.fastq.gz > 03_corrected_fq/mx66_all_L001_R2_001.fastq.gz
+        
+Submitted job 8 with external jobid 'Submitted batch job 28058912'.
+Waiting at most 50 seconds for missing files.
+[Wed Apr 16 19:40:20 2025]
+Finished job 13.
+19 of 43 steps (44%) done
+[Wed Apr 16 19:40:20 2025]
+Finished job 9.
+20 of 43 steps (47%) done
+[Wed Apr 16 19:40:20 2025]
+Finished job 10.
+21 of 43 steps (49%) done
+[Wed Apr 16 19:40:20 2025]
+Finished job 14.
+22 of 43 steps (51%) done
+[Wed Apr 16 19:40:51 2025]
+Finished job 31.
+23 of 43 steps (53%) done
+
+[Wed Apr 16 19:40:51 2025]
+rule r1_zip_ME:
+    input: 03_corrected_fq/XW376_ME_L001_R1_001.fastq
+    output: 03_corrected_fq/XW376_ME_L001_R1_001.fastq.gz
+    jobid: 11
+    wildcards: sample=XW376
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW376_ME_L001_R1_001.fastq
+Submitted job 11 with external jobid 'Submitted batch job 28058928'.
+
+[Wed Apr 16 19:40:51 2025]
+rule r2_zip_ME:
+    input: 03_corrected_fq/XW376_ME_L001_R2_001.fastq
+    output: 03_corrected_fq/XW376_ME_L001_R2_001.fastq.gz
+    jobid: 15
+    wildcards: sample=XW376
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW376_ME_L001_R2_001.fastq
+Submitted job 15 with external jobid 'Submitted batch job 28058929'.
+[Wed Apr 16 19:41:31 2025]
+Finished job 4.
+24 of 43 steps (56%) done
+[Wed Apr 16 19:41:31 2025]
+Finished job 8.
+25 of 43 steps (58%) done
+[Wed Apr 16 19:42:01 2025]
+Finished job 11.
+26 of 43 steps (60%) done
+[Wed Apr 16 19:42:01 2025]
+Finished job 15.
+27 of 43 steps (63%) done
+[Wed Apr 16 19:53:43 2025]
+Finished job 35.
+28 of 43 steps (65%) done
+
+[Wed Apr 16 19:53:43 2025]
+rule r2_zip:
+    input: 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq
+    output: 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq.gz
+    jobid: 25
+    wildcards: sample=XW374
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq
+Submitted job 25 with external jobid 'Submitted batch job 28059469'.
+
+[Wed Apr 16 19:53:43 2025]
+rule r1_zip:
+    input: 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq
+    output: 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq.gz
+    jobid: 18
+    wildcards: sample=XW374
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq
+Submitted job 18 with external jobid 'Submitted batch job 28059470'.
+[Wed Apr 16 19:58:23 2025]
+Finished job 38.
+29 of 43 steps (67%) done
+
+[Wed Apr 16 19:58:23 2025]
+rule r2_zip:
+    input: 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq
+    output: 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq.gz
+    jobid: 26
+    wildcards: sample=XW375
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq
+Submitted job 26 with external jobid 'Submitted batch job 28059633'.
+
+[Wed Apr 16 19:58:23 2025]
+rule r1_zip:
+    input: 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq
+    output: 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq.gz
+    jobid: 20
+    wildcards: sample=XW375
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq
+Submitted job 20 with external jobid 'Submitted batch job 28059634'.
+[Wed Apr 16 20:00:03 2025]
+Finished job 18.
+30 of 43 steps (70%) done
+
+[Wed Apr 16 20:00:03 2025]
+rule r1_zip_randomN:
+    input: 03_corrected_fq/XW374_randomN_L001_R1_001.fastq, 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq.gz
+    output: 03_corrected_fq/XW374_randomN_L001_R1_001.fastq.gz, 03_corrected_fq/XW374_all_L001_R1_001.fastq.gz
+    jobid: 1
+    wildcards: sample=XW374
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW374_randomN_L001_R1_001.fastq
+        cat 03_corrected_fq/XW374_oligodT_L001_R1_001.fastq.gz 03_corrected_fq/XW374_randomN_L001_R1_001.fastq.gz > 03_corrected_fq/XW374_all_L001_R1_001.fastq.gz
+        
+Submitted job 1 with external jobid 'Submitted batch job 28059673'.
+[Wed Apr 16 20:01:34 2025]
+Finished job 25.
+31 of 43 steps (72%) done
+
+[Wed Apr 16 20:01:34 2025]
+rule r2_zip_randomN:
+    input: 03_corrected_fq/XW374_randomN_L001_R2_001.fastq, 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq.gz
+    output: 03_corrected_fq/XW374_randomN_L001_R2_001.fastq.gz, 03_corrected_fq/XW374_all_L001_R2_001.fastq.gz
+    jobid: 5
+    wildcards: sample=XW374
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW374_randomN_L001_R2_001.fastq
+        cat 03_corrected_fq/XW374_oligodT_L001_R2_001.fastq.gz 03_corrected_fq/XW374_randomN_L001_R2_001.fastq.gz > 03_corrected_fq/XW374_all_L001_R2_001.fastq.gz
+        
+[Wed Apr 16 20:01:34 2025]
+Finished job 1.
+32 of 43 steps (74%) done
+Submitted job 5 with external jobid 'Submitted batch job 28059695'.
+[Wed Apr 16 20:03:04 2025]
+Finished job 20.
+33 of 43 steps (77%) done
+
+[Wed Apr 16 20:03:04 2025]
+rule r1_zip_randomN:
+    input: 03_corrected_fq/XW375_randomN_L001_R1_001.fastq, 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq.gz
+    output: 03_corrected_fq/XW375_randomN_L001_R1_001.fastq.gz, 03_corrected_fq/XW375_all_L001_R1_001.fastq.gz
+    jobid: 2
+    wildcards: sample=XW375
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW375_randomN_L001_R1_001.fastq
+        cat 03_corrected_fq/XW375_oligodT_L001_R1_001.fastq.gz 03_corrected_fq/XW375_randomN_L001_R1_001.fastq.gz > 03_corrected_fq/XW375_all_L001_R1_001.fastq.gz
+        
+[Wed Apr 16 20:03:04 2025]
+Finished job 5.
+34 of 43 steps (79%) done
+Submitted job 2 with external jobid 'Submitted batch job 28059730'.
+[Wed Apr 16 20:04:34 2025]
+Finished job 26.
+35 of 43 steps (81%) done
+
+[Wed Apr 16 20:04:34 2025]
+rule r2_zip_randomN:
+    input: 03_corrected_fq/XW375_randomN_L001_R2_001.fastq, 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq.gz
+    output: 03_corrected_fq/XW375_randomN_L001_R2_001.fastq.gz, 03_corrected_fq/XW375_all_L001_R2_001.fastq.gz
+    jobid: 6
+    wildcards: sample=XW375
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW375_randomN_L001_R2_001.fastq
+        cat 03_corrected_fq/XW375_oligodT_L001_R2_001.fastq.gz 03_corrected_fq/XW375_randomN_L001_R2_001.fastq.gz > 03_corrected_fq/XW375_all_L001_R2_001.fastq.gz
+        
+[Wed Apr 16 20:04:34 2025]
+Finished job 2.
+36 of 43 steps (84%) done
+Submitted job 6 with external jobid 'Submitted batch job 28059810'.
+[Wed Apr 16 20:06:04 2025]
+Finished job 6.
+37 of 43 steps (86%) done
+[Wed Apr 16 21:19:48 2025]
+Finished job 41.
+38 of 43 steps (88%) done
+
+[Wed Apr 16 21:19:48 2025]
+rule r1_zip:
+    input: 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq
+    output: 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq.gz
+    jobid: 22
+    wildcards: sample=XW376
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq
+Submitted job 22 with external jobid 'Submitted batch job 28061125'.
+
+[Wed Apr 16 21:19:48 2025]
+rule r2_zip:
+    input: 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq
+    output: 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq.gz
+    jobid: 27
+    wildcards: sample=XW376
+    threads: 11
+
+pigz -p 11 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq
+Submitted job 27 with external jobid 'Submitted batch job 28061126'.
+[Wed Apr 16 21:45:30 2025]
+Finished job 22.
+39 of 43 steps (91%) done
+
+[Wed Apr 16 21:45:30 2025]
+rule r1_zip_randomN:
+    input: 03_corrected_fq/XW376_randomN_L001_R1_001.fastq, 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq.gz
+    output: 03_corrected_fq/XW376_randomN_L001_R1_001.fastq.gz, 03_corrected_fq/XW376_all_L001_R1_001.fastq.gz
+    jobid: 3
+    wildcards: sample=XW376
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW376_randomN_L001_R1_001.fastq
+        cat 03_corrected_fq/XW376_oligodT_L001_R1_001.fastq.gz 03_corrected_fq/XW376_randomN_L001_R1_001.fastq.gz > 03_corrected_fq/XW376_all_L001_R1_001.fastq.gz
+        
+Submitted job 3 with external jobid 'Submitted batch job 28061505'.
+[Wed Apr 16 21:50:00 2025]
+Finished job 3.
+40 of 43 steps (93%) done
+[Wed Apr 16 21:54:40 2025]
+Finished job 27.
+41 of 43 steps (95%) done
+
+[Wed Apr 16 21:54:40 2025]
+rule r2_zip_randomN:
+    input: 03_corrected_fq/XW376_randomN_L001_R2_001.fastq, 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq.gz
+    output: 03_corrected_fq/XW376_randomN_L001_R2_001.fastq.gz, 03_corrected_fq/XW376_all_L001_R2_001.fastq.gz
+    jobid: 7
+    wildcards: sample=XW376
+    threads: 11
+
+
+        pigz -p 11 03_corrected_fq/XW376_randomN_L001_R2_001.fastq
+        cat 03_corrected_fq/XW376_oligodT_L001_R2_001.fastq.gz 03_corrected_fq/XW376_randomN_L001_R2_001.fastq.gz > 03_corrected_fq/XW376_all_L001_R2_001.fastq.gz
+        
+Submitted job 7 with external jobid 'Submitted batch job 28061636'.
+[Wed Apr 16 21:57:10 2025]
+Finished job 7.
+42 of 43 steps (98%) done
+
+[Wed Apr 16 21:57:10 2025]
+localrule targetfiles:
+    input: 03_corrected_fq/XW374_all_L001_R1_001.fastq.gz, 03_corrected_fq/XW375_all_L001_R1_001.fastq.gz, 03_corrected_fq/XW376_all_L001_R1_001.fastq.gz, 03_corrected_fq/mx66_all_L001_R1_001.fastq.gz, 03_corrected_fq/XW374_all_L001_R2_001.fastq.gz, 03_corrected_fq/XW375_all_L001_R2_001.fastq.gz, 03_corrected_fq/XW376_all_L001_R2_001.fastq.gz, 03_corrected_fq/mx66_all_L001_R2_001.fastq.gz, 03_corrected_fq/XW374_ME_L001_R1_001.fastq.gz, 03_corrected_fq/XW375_ME_L001_R1_001.fastq.gz, 03_corrected_fq/XW376_ME_L001_R1_001.fastq.gz, 03_corrected_fq/mx66_ME_L001_R1_001.fastq.gz, 03_corrected_fq/XW374_ME_L001_R2_001.fastq.gz, 03_corrected_fq/XW375_ME_L001_R2_001.fastq.gz, 03_corrected_fq/XW376_ME_L001_R2_001.fastq.gz, 03_corrected_fq/mx66_ME_L001_R2_001.fastq.gz
+    jobid: 0
+
+[Wed Apr 16 21:57:10 2025]
+Finished job 0.
+43 of 43 steps (100%) done
+Complete log: /work/xw171/sciHiCARM-RNA-extractBarcode/.snakemake/log/2025-04-16T193755.590992.snakemake.log
